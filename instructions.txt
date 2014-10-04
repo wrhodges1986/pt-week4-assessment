@@ -1,0 +1,5 @@
+  Using Angular, create a simple Todo list app. The requirements are
+    1) Users need to be able to add an item to their Todo list
+    2) Users need to be able to check off items from their Todo list
+
+    *All data should live inside a service.
