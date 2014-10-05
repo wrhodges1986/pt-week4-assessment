@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="toDoList" ng-controller="mainCtrl">
+	<head>
+		<title>To Do List</title>
+	</head>
+	
+	<body>
+		<h1> To Do List</h1>
+		<button ng-click="addAnItem()">Add Item</button>
+		<input type="text" ng-model="itemToAdd"/>
+		
+		<br />
+		
+		<button ng-click="removeAnItem()">Remove Item</button>
+		<input type="text" ng-model="itemToRemove"/>
+		<ul>
+			<li ng-repeat="item in itemsOnList">{{item}}</li>
+		</ul>
+		
+		<br />
+		
+		<button ng-click="showRemoved()">Show Removed Items</button>
+		
+		<ul ng-show="removedVisible">
+			<li ng-repeat="item in removedItems">{{item}}</li>
+		</ul>
+		
+		<script src="angular.js"></script>
+		<script src="app.js"></script>
+		<script src="mainCtrl.js"></script>
+		<script src="dataService.js"></script>
+	</body>
+</html>
